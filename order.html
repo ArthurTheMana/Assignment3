@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mangaka Coffee Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<link rel="shortcut icon" href="./img/favicon.jpg" />
+<meta name="author" content="Nguyen Tai Minh Huy" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+<form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" id="orform" onsubmit="return validateCardNumber()"> 
+<div id="wrapper">
+	<!-- start header -->
+		<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li> 
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li class="active"><a href="order.html">Order</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header><!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Order</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+    
+	<div class="container">	 
+		<!-- end divider -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h4 class="funnymiddle">Our Combos For Today!</h4>
+			</div>
+			<div class="col-lg-3">
+				<div class="pricing-box-item">
+					<div class="pricing-heading">
+						<h3><strong></strong></h3>
+					</div>
+					<div class="pricing-terms">
+						<h6>&#36;15.00</h6>
+					</div>
+					<div class="pricing-container">
+						<ul>
+							<li><i class="icon-ok"></i>Cappuccino</li>
+							<li><i class="icon-ok"></i>Chocolate Mousse</li>
+							<li><i class="icon-ok"></i>2-Scoops Ice Cream (Chocolate Flavor)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div class="col-lg-3">
+				<div class="pricing-box-item">
+					<div class="pricing-heading">
+						<h3><strong></strong></h3>
+					</div>
+					<div class="pricing-terms">
+						<h6>&#36;22.50</h6>
+					</div>
+					<div class="pricing-container">
+						<ul>
+							<li><i class="icon-ok"></i>Black Tea</li>
+							<li><i class="icon-ok"></i>Cheesecake</li>
+							<li><i class="icon-ok"></i>Nian Figure (Arknights)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div class="col-lg-3">
+				<div class="pricing-box-item">
+					<div class="pricing-heading">
+						<h3><strong></strong></h3>
+					</div>
+					<div class="pricing-terms">
+						<h6>&#36;13.50</h6>
+					</div>
+					<div class="pricing-container">
+						<ul>
+							<li><i class="icon-ok"></i>Masala Chai Tea</li>
+							<li><i class="icon-ok"></i>Cupcakes (Quantity Of 12)</li>
+							<li><i class="icon-ok"></i>Egg Sandwiches</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div class="col-lg-3">
+				<div class="pricing-box-item">
+					<div class="pricing-heading">
+						<h3><strong></strong></h3>
+					</div>
+					<div class="pricing-terms">
+						<h6>&#36;15.75</h6>
+					</div>
+					<div class="pricing-container">
+						<ul>
+							<li><i class="icon-ok"></i>Black Coffee</li>
+							<li><i class="icon-ok"></i>Egg On Toast With Sausages</li>
+							<li><i class="icon-ok"></i>A Random Plushie.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+    <!-- Order yourself if you don't want to choose combo. --> 
+
+    <section id="content">
+
+			<div class="container">
+                <div class="ordertime">
+                    <legend><h2>Or... Order Yourself!</h2></legend>
+                    
+                    <div class="sectionfororder">
+                        <h3>Coffee</h3>
+                        <label for="orderic1" class="textform">Cappuccino</label>
+                        <input type="checkbox" id="orderic1" onclick="showquantitycap()">
+                        <div id="numberorderic1"> 
+                            <br>
+                            <label for="num_ord1" class="textform">Quantity</label>
+                            <input type="number" name="num_ord1"  id="num_ord1">
+                        </div>
+                        
+                        
+                        
+                        <br>
+                        <label for="orderic2" class="textform">Latte</label>
+                        <input type="checkbox" id="orderic2" onclick="showquantitylat()">
+                        <div id="numberorderic2"> 
+                            <br>
+                            <label for="num_ord2" class="textform">Quantity</label>
+                            <input type="number" name="num_ord2" id="num_ord2">
+                        </div>
+                    
+                        
+                        
+                        
+                        <br>
+                        <label for="orderic3" class="textform">Mocha</label>
+                        <input type="checkbox" id="orderic3" onclick="showquantitymoc()">
+                        <div id="numberorderic3"> 
+                            <br>
+                            <label for="num_ord3" class="textform">Quantity</label>
+                            <input type="number" name="num_ord3" id="num_ord3">
+                        </div>
+                        
+                        
+                        
+                        <br>
+                        <label for="orderic4" class="textform">Americano</label>
+                        <input type="checkbox" id="orderic4" onclick="showquantityame()">
+                        <div id="numberorderic4"> 
+                            <br>
+                            <label for="num_ord4" class="textform">Quantity</label>
+                            <input type="number" name="num_ord4" id="num_ord4">
+                        </div>
+                 
+                        <br>
+                        <label for="orderic5" class="textform">Other Coffee</label>
+                        <input type="checkbox" id="orderic5" onclick="showquantityother()">
+                        <div id="numberorderic5"> 
+                            <br>
+                            <label for="coffee_name" class="textform">Coffee Name</label>
+                            <input type="text" name="coffee_name" id="coffee_name">
+                            
+                            <label for="num_ord5" class="textform">Quantity</label>
+                            <input type="number" name="num_ord5" id="num_ord5">
+                        </div>
+                        
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="sectionfororder">
+                        <h3>Tea</h3>
+                        <label for="orderic6" class="textform">Oolong</label>
+                        <input type="checkbox" id="orderic6" onclick="showquantityool()">
+                        <div id="numberorderic6"> 
+                            <br>
+                            <label for="num_ord6" class="textform">Quantity</label>
+                            <input type="number" name="num_ord6"  id="num_ord6">
+                        </div>
+                        
+                        
+                        
+                        <br>
+                        <label for="orderic7" class="textform">Black</label>
+                        <input type="checkbox" id="orderic7" onclick="showquantitybla()">
+                        <div id="numberorderic7"> 
+                            <br>
+                            <label for="num_ord7" class="textform">Quantity</label>
+                            <input type="number" name="num_ord7" id="num_ord7">
+                        </div>
+                    
+                        
+                        
+                        
+                        <br>
+                        <label for="orderic8" class="textform">Herbal</label>
+                        <input type="checkbox" id="orderic8" onclick="showquantityher()">
+                        <div id="numberorderic8"> 
+                            <br>
+                            <label for="num_ord8" class="textform">Quantity</label>
+                            <input type="number" name="num_ord8" id="num_ord8">
+                        </div>
+                        
+                        
+                        
+                        <br>
+                        <label for="orderic9" class="textform">Masala chai</label>
+                        <input type="checkbox" id="orderic9" onclick="showquantitycha()">
+                        <div id="numberorderic9">
+                            <br> 
+                            <label for="num_ord9" class="textform">Quantity</label>
+                            <input type="number" name="num_ord9" id="num_ord9">
+                        </div>
+                    
+                        
+                        
+                        <br>
+                        <label for="orderic10" class="textform">Other Tea</label>
+                        <input type="checkbox" id="orderic10" onclick="showquantityothertea()">
+                        <div id="numberorderic10">
+                            <br> 
+                            <label for="tea_name" class="textform">Tea Name</label>
+                            <input type="text" name="tea_name" id="tea_name">
+                            
+                            <label for="num_ord10" class="textform">Quantity</label>
+                            <input type="number" name="num_ord10" id="num_ord10">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="sectionfororder">
+                        <h3>Desserts</h3>
+                        <label for="orderic11" class="textform">Cupcakes</label>
+                        <input type="checkbox" id="orderic11" onclick="showquantitycup()">
+                        <div id="numberorderic11"> 
+                            <br>
+                            <label for="num_ord11" class="textform">Quantity</label>
+                            <input type="number" name="num_ord11"  id="num_ord11">
+                        </div>
+
+                        <br>
+                        <label for="orderic12" class="textform">Cookies</label>
+                        <input type="checkbox" id="orderic12" onclick="showquantitycoo()">
+                        <div id="numberorderic12">
+                            <br>  
+                            <label for="num_ord12" class="textform">Quantity</label>
+                            <input type="number" name="num_ord12" id="num_ord12">
+                        </div>
+
+                        <br>
+                        <label for="orderic13" class="textform">Puddings</label>
+                        <input type="checkbox" id="orderic13" onclick="showquantitypud()">
+                        <div id="numberorderic13"> 
+                            <br> 
+                            <label for="num_ord13" class="textform">Quantity</label>
+                            <input type="number" name="num_ord13" id="num_ord13">
+                        </div>
+
+                        <br>
+                        <label for="orderic14" class="textform">Ice Cream</label>
+                        <input type="checkbox" id="orderic14" onclick="showquantityice()">
+                        <div id="numberorderic14">
+                            <br> 
+                            <label for="icecream_name" class="textform">Flavor</label>
+                            <select name="icecream_name" id="icecream_name">
+                                <option value="vanilla">Vanilla</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="strawberry">Strawberry</option>
+                                <option value="mint-chocolate-chip">Mint Chocolate Chip</option>
+                                <option value="cookie-dough">Cookie Dough</option>
+                                <option value="butter-pecan">Butter Pecan</option>
+                                <option value="coffee">Coffee</option>
+                                <option value="pistachio">Pistachio</option>
+                                <option value="double-chocolate">Double Chocolate</option>
+                            </select>
+                            <label for="num_ord14" class="textform">Quantity</label>
+                            <input type="number" name="num_ord14" id="num_ord14">
+                        </div>
+
+                        <br>
+                        <label for="orderic15" class="textform">Other Dessert</label>
+                        <input type="checkbox" id="orderic15" onclick="showquantityotherdes()">
+                        <div id="numberorderic15">
+                            <br> 
+                            <label for="dessert_name" class="textform">Dessert Name</label>
+                            <input type="text" name="dessert_name" id="dessert_name">
+                            
+                            <label for="num_ord15" class="textform">Quantity</label>
+                            <input type="number" name="num_ord15" id="num_ord15">
+                        </div>
+
+
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="sectionfororder">
+                        <h3>Choose your payment method (It will also determined how you want to take products.) </h3>
+
+
+                        <label for="deli" class="textform">Delivery</label>
+                        <input type="radio" name="paymethod" id="deli" value="delivery" onclick="showPaymentOption()">
+                        <br>
+                        <label for="pick" class="textform">Pickup (At Store)</label>
+                        <input type="radio" name="paymethod" id="pick" value="pickupatstore" onclick="showPaymentOption()">
+                        <br>
+                        <div id="crecard">
+                            <label for="billadd" class="textform">Billing address</label>
+                            <br>
+                            <input type="text" name="billadd" id="billadd">
+
+                            <br>
+
+                            <label for="contnum" class="textform">Contact number </label>
+                            <br>
+                            <input type="number" name="contnum" id="contnum">
+
+                            <br>
+
+                            <label for="emailrecei" class="textform">Email for receipt</label>
+                            <br>
+                            <input type="text" name="emailrecei" id="emailrecei">
+
+                            <br>
+
+                            <label for="payment" class="textform">Pay on pickup or online</label>
+                            <br>
+                            <div>
+                                <label for="pickup" class="textform">Pickup</label>
+                                <input type="radio" name="payup" id="pickup" value="pickup" onclick="pickoron()">
+                                <label for="online" class="textform">Online</label>
+                                <input type="radio" name="payup" id="online" value="online" onclick="pickoron()">
+                                <br>
+                                <div id="cardnumber">
+                                    
+                                    <label for="cardnum" class="textform">Card number </label>
+                                    <br>
+                                    <input type="number" name="cardnum" id="cardnum">
+
+                                    <script>
+                                        function validateCardNumber() {
+
+                                          var cardNumberInput = document.getElementById("cardnum");
+                                          var cardNumber = cardNumberInput.value;
+                                    
+                                          // Check if the card number is 16 characters long and contains only numbers
+                                          if (cardNumber.length === 16 && /^\d+$/.test(cardNumber)) {
+                                            alert("Card number is valid!");
+                                          } else {
+                                            alert("Invalid card number. Please enter a 16-digit number.");
+                                            return false;
+                                          }
+                                        }
+                                      </script>
+                                </div>
+
+                            </div>
+
+                                
+
+                        </div>
+                        <br>
+
+
+                    </div>
+
+                    <br>
+                    <br>
+                    <input type="submit" name="Submit" id="submit" class="btn btn-default">
+                    <input type="reset" name="Reset" id="reset" class="btn btn-default"> 
+                </div>
+            </div>       
+    </section>
+
+</form> 
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">Our Contact</h5>
+                        <address>
+                        <strong>Mangaka Coffee Inc.</strong><br>
+                        21 Thanh Da, Province 27, Binh Thanh District.<br>
+                         Ho Chi Minh City, VN</address>
+                        <p>
+                            <i class="icon-phone"></i> (+84) 898-088430 <br>
+                            <i class="icon-envelope-alt"></i> huyntmsws00231@fpt.edu.vn
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">Quick Links</h5>
+                        <ul class="link-list">
+                            <li><a href="index.html"data-scroll>Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">Recommendation For Today</h5>
+                        <ul class="link-list">
+                            <li>Cupcakes and Tea!</a></li>
+                            <li>Donuts and Coffee!</a></li>
+                            <li>Sweet And Soft Drinks!</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">Recent News - 1 NOV 2023</h5>
+                        <ul class="link-list">
+                            <li>Beans Arrival</a></li>
+                            <li>Menu Update</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                <span>&copy; Mangaka Coffee 2023 </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-network">
+                            <li><a href="https://www.facebook.com/lappla.milarina/" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/TheGoatOfArks" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/huy-nguyen-tai-minh-45b549228/" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.pinterest.com/hnguyentaiminh/" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
